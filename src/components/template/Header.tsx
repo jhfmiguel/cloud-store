@@ -1,14 +1,19 @@
-import Title from "./Title"
+import Logo from './Logo'
+import Search from './Search'
+import Utils from './Utils'
 
-interface HeaderProps {
-    title: string
-    subtitle: string
-}
-
-export default function Header( props: HeaderProps ) {
+export default function Header() {
     return (
-        <div>
-            <Title title={ props.title } subtitle={ props.subtitle }/>
+        <div className='flex flex-row z-40 fixed bg-yellow-400 dark:bg-neutral-950 text-neutral-950 dark:text-yellow-400 h-12 justify-start items-center w-full'>
+            <div className="basis-1/4">
+                <Logo/>
+            </div>
+            <div className="basis-1/2">
+                <Search/>
+            </div>
+            <div className="basis-1/4">
+                <Utils/>
+            </div>
         </div>
     )
 }
